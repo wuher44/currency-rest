@@ -1,0 +1,28 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      - "10012:10012"
+
+
+  database:
+    image: mysql
+    container_name: database
+    environment:
+      MYSQL_PASSWORD: starwars
+      MYSQL_ROOT_PASSWORD: starwars
+      MYSQL_USER: user
+      MYSQL_DATABASE: currencydb
+    ports:
+      - "3306:3306"
+
+
+
+
+
+
+
+
+
+
